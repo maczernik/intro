@@ -1,0 +1,58 @@
+{
+  "arrowParens": "always",
+  "attributeGroups": [
+    "$ANGULAR_STRUCTURAL_DIRECTIVE",
+    "$ANGULAR_ELEMENT_REF",
+    "$ANGULAR_INPUT",
+    "$ANGULAR_OUTPUT",
+    "$ANGULAR_ANIMATION"
+  ],
+  "attributeSort": "ASC",
+  "bracketSameLine": false,
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "strict",
+  "importOrder": [
+    "<THIRD_PARTY_MODULES>",
+    "^@(storybookconfig)/(.*)$",
+    "^src/",
+    "^[.]{2}/",
+    "^[.]{1}/"
+  ],
+  "importOrderParserPlugins": [
+    "decorators-legacy",
+    "typescript"
+  ],
+  "importOrderSeparation": true,
+  "multilineArraysWrapThreshold": 1,
+  "plugins": [
+    "@trivago/prettier-plugin-sort-imports",
+    "prettier-plugin-multiline-arrays",
+    "prettier-plugin-organize-attributes",
+    "prettier-plugin-packagejson",
+    "prettier-plugin-two-style-order"
+  ],
+  "printWidth": 80,
+  "quoteProps": "consistent",
+  "semi": true,
+  "singleAttributePerLine": true,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "useTabs": false,
+  "overrides": [
+    {
+      "files": "*.html",
+      "options": {
+        "parser": "angular",
+        "printWidth": 160
+      }
+    },
+    {
+      "files": "*.spec.ts",
+      "options": {
+        "printWidth": 100
+      }
+    }
+  ]
+}

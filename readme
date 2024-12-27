@@ -1,0 +1,64 @@
+Topics:
+
+Angular - NVM
+
+    - CLI
+        - install
+        npm install -g @angular/cli@16.2.16
+
+    - Versions ?
+
+    - Project setup
+        - CLI
+            install npm install -g @angular/cli
+
+    - Component
+        - Data bindings
+        - Change detection
+        - Lifecycle
+    - Router
+        - Lazy loaded modules https://v17.angular.io/guide/lazy-loading-ngmodules
+            - How module is split?
+
+Reactivity / RXSJ
+
+    -
+
+Styling
+
+    - css / SCSS
+
+Playwright
+
+Storybook / Loki
+
+Jest / Karma
+
+Jest install on 19
+
+    - https://medium.com/@megha.d.parmar2018/angular-unit-testing-with-jest-2023-2676faa2e564
+
+// Recomendations
+
+VSC with extensions
+
+// Install
+npm install -g @angular/cli@16.2.16
+
+ng new intro
+
+- Remove karma install jest
+
+npm uninstall karma karma-chrome-launcher karma-coverage karma-jasmine karma-jasmine-html-reporter @types/jasmine jasmine-core
+npm i --save-dev jest @types/jest jest-preset-angular jest-watch-typeahead
+npm i ts-node
+
+- Setup linters
+
+npm i --save-dev eslint eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-jest eslint-plugin-no-relative-import-paths eslint-plugin-rxjs eslint-plugin-rxjs-angular eslint-plugin-typescript-sort-keys @typescript-eslint/eslint-plugin @typescript-eslint/parser @trivago/prettier-plugin-sort-imports @stylistic/eslint-plugin-ts @angular-eslint/builder @angular-eslint/eslint-plugin @angular-eslint/eslint-plugin-template @angular-eslint/schematics @angular-eslint/template-parser
+
+npm i --save-dev stylelint stylelint-config-sass-guidelines stylelint-config-standard stylelint-config-standard-scss stylelint-order
+
+npm i --save @angular/localize@16.2.12
+
+Copy all related files

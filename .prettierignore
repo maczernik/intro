@@ -1,0 +1,16 @@
+# Ignore artifacts:
+
+node_modules
+.angular
+.ArchitectureDecisionLog
+.e2e/test_reports
+.e2e/traces
+.env
+.env-example
+.github
+.loki
+src/assets
+coverage
+dist
+storybook-static
+documentation.json

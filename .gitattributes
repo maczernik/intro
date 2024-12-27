@@ -1,0 +1,3 @@
+# Disable text manipulation for any file in the repository by git.
+# Due to the EOL conflicts with Prettier and editorconfig LF configurations with the Windows CRLF default.
+* -text
