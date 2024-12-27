@@ -1,0 +1,23 @@
+{
+  plugins: [],
+  overrides: [
+    // TypeScript - acceptance tests files
+    {
+      files: ['*.ts'],
+      extends: ['./typescript.json5'],
+      rules: {
+        'no-console': ['off'],
+      },
+    },
+
+    // TypeScript - acceptance tests steps files
+    {
+      files: ['*.steps.ts'],
+
+      rules: {
+        '@typescript-eslint/await-thenable': 'off',
+        'prefer-arrow-callback': ['off'],
+      },
+    },
+  ],
+}

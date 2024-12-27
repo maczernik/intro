@@ -1,0 +1,84 @@
+{
+  plugins: [
+    'rxjs-angular',
+  ],
+  overrides: [
+    // TypeScript - angular app files
+    {
+      files: ['*.ts'],
+      excludedFiles: [
+        '*.mock.ts',
+        '*.spec.ts',
+        '*.stories.ts',
+        '*.stub.ts',
+      ],
+      extends: [
+        './typescript.json5',
+        // @see https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin/src/configs/recommended.json
+        'plugin:@angular-eslint/recommended',
+        // @see https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/src/configs/process-inline-templates.json
+        'plugin:@angular-eslint/template/process-inline-templates',
+        // @see https://github.com/cartant/eslint-plugin-rxjs/blob/main/source/configs/recommended.ts
+        'plugin:rxjs/recommended',
+      ],
+      // @see All available angular rules: https://github.com/angular-eslint/angular-eslint/tree/master/packages/eslint-plugin/src/rules
+      // @see All available angular template rules: https://github.com/angular-eslint/angular-eslint/tree/master/packages/eslint-plugin-template/src/rules
+      // @see All available RxJS rules: https://github.com/cartant/eslint-plugin-rxjs
+      // @see All available RxJS for Angular rules: https://github.com/cartant/eslint-plugin-rxjs-angular
+      rules: {
+        '@angular-eslint/component-selector': [
+          'error',
+          {
+            prefix: 'in',
+            style: 'kebab-case',
+            type: 'element',
+          },
+        ],
+        '@angular-eslint/directive-selector': [
+          'error',
+          {
+            prefix: 'in',
+            style: 'camelCase',
+            type: 'attribute',
+          },
+        ],
+        '@angular-eslint/no-output-on-prefix': 'off',
+        '@typescript-eslint/no-empty-function': [
+          'error',
+          {
+            allow: ['decoratedFunctions'],
+          },
+        ],
+        'rxjs-angular/prefer-takeuntil': [
+          'error',
+          {
+            alias: ['untilDestroyed'],
+          },
+        ],
+        'rxjs/finnish': [
+          'error',
+          {
+            functions: false,
+            methods: false,
+            names: {
+              '^(canActivate|canActivateChild|canDeactivate|canLoad|intercept|resolve|validate)$': false,
+            },
+            parameters: true,
+            properties: true,
+            strict: false,
+            types: {
+              '^EventEmitter$': false,
+            },
+            variables: true,
+          },
+        ],
+        'rxjs/no-exposed-subjects': [
+          'error',
+          { allowProtected: true },
+        ],
+        'rxjs/no-ignored-observable': 'error',
+        'rxjs/no-subject-value': 'error',
+      },
+    },
+  ],
+}

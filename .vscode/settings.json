@@ -1,0 +1,50 @@
+{
+  // Prevent both the editor built-in linters and "stylelint" extension from reporting essentially the same errors
+  "css.validate": false,
+  "breadcrumbs.enabled": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": "explicit",
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "graphql"
+  ],
+  "eslint.workingDirectories": [
+    "./",
+  ],
+  "files.insertFinalNewline": true,
+  "gitlens.integrations.enabled": true,
+  "gitlens.showWhatsNewAfterUpgrades": false,
+  "gitlens.plusFeatures.enabled": false,
+  "javascript.preferences.quoteStyle": "single",
+  "less.validate": false,
+  "material-icon-theme.files.associations": {
+    "*.css": "sass",
+    "*.client.ts": "http",
+    "*.graphql.ts": "graphql",
+    "*.model.ts": "3d",
+    "*.stub.ts": "test-js",
+    "*.mock.ts": "test-js",
+    "*.harness.spec.ts": "h",
+    "*.harness.ts": "h",
+    "*.stories.mdx": "mdx",
+    "ng-package.json": "parcel",
+    "public-api.ts": "parcel"
+  },
+  "scss.validate": false,
+  "stylelint.enable": true,
+  "stylelint.snippet": ["scss"],
+  "stylelint.validate": ["scss"],
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "cSpell.words": [
+    "endregion",
+    "stylelint"
+  ],
+}

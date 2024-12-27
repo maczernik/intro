@@ -1,0 +1,18 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "types": [
+      "@angular/localize",
+      "node"
+    ]
+  },
+  /*
+    Unlike in tsconfig.app.json, all *.ts files are included here to allow eslint
+    consume also files that were not imported anywhere yet.
+  */
+  "include": [
+    "src/**/*.ts"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "assets/**/*",
+    "setup-jest.ts"
+  ],
+  "overrides": [
+    // TypeScript - only angular-specific files for the main app
+    {
+      "files": ["*.ts"],
+      "excludedFiles": [
+        "*.mock.ts",
+        "*.spec.ts",
+        "*.stories.ts",
+        "*.stub.ts"
+      ],
+      "extends": [
+        "../eslint/typescript-angular.json5"
+      ],
+      "parserOptions": {
+        "project": [
+          // Project path is relative to the current directory from which eslint is executed
+          "./tsconfig.app-with-not-imported.json"
+        ]
+      }
+    },
+
+    // TypeScript - files for unit tests
+    {
+      "files": [
+        "*.harness.ts",
+        "*.mock.ts",
+        "*.spec.ts",
+        "*.stub.ts"
+      ],
+      "extends": ["../eslint/typescript-unit-tests.json5"],
+      "parserOptions": {
+        // Project path is relative to the current directory from which eslint is executed
+        "project": ["./tsconfig.spec.json"]
+      }
+    },
+
+    // TypeScript - storybook files
+    {
+      "files": ["*.stories.ts"],
+      "extends": ["../eslint/typescript-storybook.json5"],
+      "parserOptions": {
+        // Project path is relative to the current directory from which eslint is executed
+        "project": ["./.storybook/tsconfig.json"]
+      }
+    },
+
+    // HTML - angular templates
+    {
+      "files": ["*.html"],
+      "extends": "../eslint/html-angular.json5"
+    }
+  ]
+}

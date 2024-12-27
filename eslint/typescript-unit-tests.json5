@@ -1,0 +1,60 @@
+{
+  env: {
+    'jest/globals': true,
+  },
+  overrides: [
+    // TypeScript - angular files
+    {
+      // Specific extensions (spec, stub etc) must be defined in the parent override
+      files: [
+        '*.mock.ts',
+        '*.spec.ts',
+        '*.stub.ts',
+      ],
+      plugins: [
+        'eslint-plugin-jest',
+      ],
+      extends: [
+        './typescript.json5',
+        'plugin:jest/recommended',
+        'plugin:jest/style',
+      ],
+      // @see All available Jest rules: https://github.com/jest-community/eslint-plugin-jest#rules
+      rules: {
+        '@typescript-eslint/explicit-function-return-type': 'off',
+        '@typescript-eslint/no-empty-block': 'off',
+        '@typescript-eslint/no-empty-function': 'off',
+        '@typescript-eslint/no-extraneous-class': 'off',
+        '@typescript-eslint/no-magic-numbers': 'off',
+        '@typescript-eslint/unbound-method': 'off',
+        'jest/max-expects': [
+          'error',
+          {
+            max: 1,
+          },
+        ],
+        'jest/max-nested-describe': [
+          'error',
+          {
+            max: 3,
+          },
+        ],
+        'jest/no-confusing-set-timeout': 'error',
+        'jest/prefer-each': 'error',
+        'jest/prefer-equality-matcher': 'error',
+        'jest/prefer-hooks-on-top': 'error',
+        'jest/prefer-lowercase-title': [
+          'error',
+          {
+            ignore: ['describe'],
+          },
+        ],
+        'jest/prefer-spy-on': 'error',
+        'jest/prefer-todo': 'error',
+        'jest/require-to-throw-message': 'error',
+        'jest/require-top-level-describe': 'error',
+        'no-empty': 'off',
+      },
+    },
+  ],
+}

@@ -1,0 +1,59 @@
+{
+  plugins: [],
+  overrides: [
+    // Component templates
+    {
+      files: ['*.html'],
+      extends: [
+        // @see https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/src/configs/recommended.json
+        'plugin:@angular-eslint/template/recommended',
+        'plugin:@angular-eslint/template/accessibility',
+      ],
+      rules: {
+        '@angular-eslint/template/alt-text': 'error',
+        '@angular-eslint/template/button-has-type': 'error',
+        '@angular-eslint/template/conditional-complexity': [
+          'error',
+          {
+            maxComplexity: 3,
+          },
+        ],
+        '@angular-eslint/template/cyclomatic-complexity': [
+          'error',
+          {
+            maxComplexity: 5,
+          },
+        ],
+        '@angular-eslint/template/elements-content': [
+          'error',
+          {
+            allowList: [
+              'aria-labelledby',
+              'ariaLabel',
+              'ui-tooltip',
+            ],
+          },
+        ],
+        '@angular-eslint/template/i18n': [
+          'error',
+          {
+            checkAttributes: false,
+            checkId: false,
+            ignoreTags: [
+              'title',
+            ],
+            requireDescription: false,
+            requireMeaning: false,
+          },
+        ],
+        '@angular-eslint/template/no-call-expression': ['error'],
+        '@angular-eslint/template/no-duplicate-attributes': ['error'],
+        '@angular-eslint/template/no-inline-styles': ['error'],
+        '@angular-eslint/template/no-negated-async': ['error'],
+        '@angular-eslint/template/no-positive-tabindex': ['error'],
+        // '@angular-eslint/template/prefer-control-flow': ['error'], // Enable it after migration to Angular 17
+        '@angular-eslint/template/use-track-by-function': ['error'],
+      },
+    },
+  ],
+}
