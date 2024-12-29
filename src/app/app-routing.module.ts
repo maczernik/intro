@@ -40,6 +40,13 @@ const routes: Routes = [
       import('./intro-rxjs/intro-rxjs.module').then((m) => m.IntroRxjsModule),
     path: 'rxjs',
   },
+  {
+    loadChildren: () =>
+      import('./intro-change-detection/intro-change-detection.module').then(
+        (m) => m.IntroChangeDetectionModule,
+      ),
+    path: 'change-detection',
+  },
 ];
 
 @NgModule({

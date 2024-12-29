@@ -1,0 +1,34 @@
+<p i18n> Example of how Angular change detection works. Open the console.</p>
+
+<in-explore-change-detection [inputValue]="inputValue"></in-explore-change-detection>
+
+<in-on-push-detection-with-on-push [inputValue]="inputValue"></in-on-push-detection-with-on-push>
+
+<button
+  (click)="increaseValue()"
+  i18n
+  type="button"
+  >Increase value (like mutate)</button
+>
+
+<button
+  (click)="increaseValueByNewReference()"
+  i18n
+  type="button"
+  >Increase value by changing the reference</button
+>
+
+<button
+  (click)="emitEvent()"
+  i18n
+  type="button"
+  >Emits event when clicked</button
+>
+
+<div
+  (focus)="emitEvent()"
+  (mousemove)="emitEvent()"
+  i18n
+  type="button"
+  >Hover me to emit a lot of events.</div
+>
