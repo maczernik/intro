@@ -1,1 +1,13 @@
-<p>intro-providers works!</p>
+<p i18n> ProviderRootService has been provided in the root module (providedIn). Can be injected in any component or service. </p>
+<p i18n> Only one instance of ProviderRootService(Singleton) will be created when the service is injected.</p>
+<br />
+<p i18n>ProviderAService has been provided in the wrapper component.</p>
+<p i18n>ProviderAService creates new instance every time when wrapper was initialized</p>
+<p i18n>ProviderAService the same instance is used in children components (when not provided directly)</p>
+<p i18n>ProviderAService new instance is created when provided in component B</p>
+<br />
+<p i18n>ProviderBService has been provided only in component A.</p>
+<p i18n>ProviderBService new instance is created for every component instance. (4)</p>
+<br />
+
+<in-wrapper></in-wrapper>

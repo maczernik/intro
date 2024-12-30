@@ -332,7 +332,7 @@
           'off', // Conflicts with Prettier
         ],
         'no-confusing-arrow': ['error'],
-        'no-console': ['error'],
+        'no-console': ['off'],
         'no-duplicate-imports': ['error'],
         'no-else-return': ['error'],
         'no-implicit-coercion': [
