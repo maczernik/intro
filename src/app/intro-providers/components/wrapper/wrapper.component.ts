@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 
 import { ChildAComponent } from 'src/app/intro-providers/components/child-a/child-a.component';
 import { ChildBComponent } from 'src/app/intro-providers/components/child-b/child-b.component';
+import { COMPONENT_CONFIGURATION } from 'src/app/intro-providers/injectors/component-configuration';
 import { ProviderAService } from 'src/app/intro-providers/services/provider-a.service';
 import { ProviderRootService } from 'src/app/intro-providers/services/provider-root.service';
 
@@ -14,6 +15,12 @@ import { ProviderRootService } from 'src/app/intro-providers/services/provider-r
   ],
   providers: [
     ProviderAService,
+    {
+      provide: COMPONENT_CONFIGURATION,
+      useValue: {
+        context: 10,
+      },
+    },
   ],
   selector: 'in-wrapper',
   standalone: true,

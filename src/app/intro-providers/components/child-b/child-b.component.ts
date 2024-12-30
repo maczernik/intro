@@ -1,6 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 
+import {
+  COMPONENT_CONFIGURATION,
+  ComponentConfiguration,
+} from 'src/app/intro-providers/injectors/component-configuration';
 import { ProviderAService } from 'src/app/intro-providers/services/provider-a.service';
 import { ProviderRootService } from 'src/app/intro-providers/services/provider-root.service';
 
@@ -8,6 +12,12 @@ import { ProviderRootService } from 'src/app/intro-providers/services/provider-r
   imports: [CommonModule],
   providers: [
     ProviderAService,
+    {
+      provide: COMPONENT_CONFIGURATION,
+      useValue: {
+        context: 100,
+      },
+    },
   ],
   selector: 'in-child-b',
   standalone: true,
@@ -18,5 +28,7 @@ export class ChildBComponent {
   constructor(
     private readonly providerRootService: ProviderRootService,
     private readonly providerAService: ProviderAService,
+    @Inject(COMPONENT_CONFIGURATION)
+    protected readonly componentConfiguration: ComponentConfiguration,
   ) {}
 }
