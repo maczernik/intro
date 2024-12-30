@@ -31,4 +31,8 @@ export class ChildBComponent {
     @Inject(COMPONENT_CONFIGURATION)
     protected readonly componentConfiguration: ComponentConfiguration,
   ) {}
+
+  public showNotification(): string {
+    return this.providerAService.getPointDescription();
+  }
 }
