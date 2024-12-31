@@ -35,7 +35,7 @@
           },
         ],
         '@angular-eslint/template/i18n': [
-          'error',
+          'off',
           {
             checkAttributes: false,
             checkId: false,
