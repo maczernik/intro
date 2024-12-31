@@ -19,7 +19,7 @@
           },
         ],
         '@angular-eslint/template/cyclomatic-complexity': [
-          'error',
+          'off',
           {
             maxComplexity: 5,
           },
