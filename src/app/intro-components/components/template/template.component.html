@@ -2,40 +2,43 @@
 <div attr.title="{{ componentVariable }}">{{ componentVariable }}</div>
 
 <!-- Example of input/attribute bindings -->
-<in-template-snack componentInput="Just a string"></in-template-snack>
+1 <in-template-snack componentInput="Just a string"></in-template-snack>
 
-<in-template-snack [componentInput]="componentVariable"></in-template-snack>
+2 <in-template-snack [componentInput]="componentVariable"></in-template-snack>
 
-<in-template-snack [componentInput]="'componentVariable'"></in-template-snack>
+3 <in-template-snack [componentInput]="'componentVariable'"></in-template-snack>
 
-<in-template-snack componentInput="{{ componentVariable }}"></in-template-snack>
+4 <in-template-snack componentInput="{{ componentVariable }}"></in-template-snack>
 
-<in-template-snack attr.title="{{ componentVariable }}"></in-template-snack>
+5 <in-template-snack attr.title="{{ componentVariable }}"></in-template-snack>
 <!-- Input is not an attribute-->
-<in-template-snack attr.componentInput="{{ componentVariable }}"></in-template-snack>
+6 <in-template-snack attr.componentInput="{{ componentVariable }}"></in-template-snack>
 
 <br />
 
 <!-- Example of angular directives -->
 
-<span *ngIf="true">H</span>
+7 <span *ngIf="true">H</span>
 <!-- inline condition -->
-<span *ngIf="componentVariable === 'Unexpected text'">X</span>
+8 <span *ngIf="componentVariable === 'Unexpected text'">X</span>
 <!-- component variable condition -->
-<span *ngIf="componentVariable as NEW_VARIABLE"> {{ NEW_VARIABLE }}</span>
+9 <span *ngIf="componentVariable as TEMPLATE_VARIABLE"> {{ TEMPLATE_VARIABLE }}</span>
+
+10 <span *ngIf="asyncVariable$ | async as ASYNC_TEMPLATE_VARIABLE">ASYNC TEMPLATE VARIABLE: {{ ASYNC_TEMPLATE_VARIABLE }}</span>
+
 <!-- new template variable -->
 <br />
 
-<span *ngIf="true; else ifElseTemplate1">Expected message.</span>
+11 <span *ngIf="true; else ifElseTemplate1">Expected message.</span>
 <!-- else block -->
-<span *ngIf="false; else ifElseTemplate1">Unexpected message.</span>
+12 <span *ngIf="false; else ifElseTemplate1">Unexpected message.</span>
 <br />
 
-<span *ngIf="false; then ifElseTemplate1; else ifElseTemplate2">Unexpected message.</span>
+13 <span *ngIf="false; then ifElseTemplate1; else ifElseTemplate2">Unexpected message.</span>
 <!-- then / else block, no basic content -->
-<span *ngIf="false; then ifElseTemplate1; else ifElseTemplate2">Unexpected message.</span>
+14 <span *ngIf="false; then ifElseTemplate1; else ifElseTemplate2">Unexpected message.</span>
 <br />
-
+15
 <span>
   <!-- ng-container to keep <span> styling  -->
   <ng-container *ngIf="false; then ifElseTemplate1; else ifElseTemplate2">Unexpected message.</ng-container>
@@ -43,3 +46,5 @@
 
 <ng-template #ifElseTemplate1>Template message 1.</ng-template>
 <ng-template #ifElseTemplate2>Template message 2.</ng-template>
+
+// NG FOR // NG CLASS
