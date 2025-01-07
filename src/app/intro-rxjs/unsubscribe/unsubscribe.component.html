@@ -1,0 +1,18 @@
+<p>1. Subscriptions</p>
+
+<in-with-subscription
+  *ngIf="isActive"
+  [nr]="nr"
+></in-with-subscription>
+
+<p> Every recreation is adding the subscription in the memory.</p>
+<button
+  (click)="isActive = false"
+  type="button"
+  >Destroy</button
+>
+<button
+  (click)="create()"
+  type="button"
+  >Create</button
+>

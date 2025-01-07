@@ -8,6 +8,13 @@ const routes: Routes = [
     component: IntroComponentsComponent,
     path: '',
   },
+  {
+    loadComponent: () =>
+      import(
+        'src/app/intro-components/components/template-styling/template-styling.component'
+      ).then((m) => m.TemplateStylingComponent),
+    path: 'template-styling',
+  },
 ];
 
 @NgModule({

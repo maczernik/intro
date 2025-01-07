@@ -50,7 +50,7 @@
           },
         ],
         'rxjs-angular/prefer-takeuntil': [
-          'error',
+          'off',
           {
             alias: ['untilDestroyed'],
           },
